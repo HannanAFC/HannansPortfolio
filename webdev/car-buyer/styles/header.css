@@ -1,0 +1,137 @@
+.header {
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(249, 249, 249);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bdbdbd;
+  box-shadow: 0px 10px 12px 0px #bdbdbdd0;
+  z-index: 3;
+  border-radius: 0 0 15px 15px;
+}
+
+
+.left-section {
+  display: flex;
+  align-items: stretch;
+}
+
+.middle-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 500px;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.right-section {
+  display: flex;
+  align-items: stretch;
+}
+
+.button-wrapper-left {
+  display: flex;
+  flex: 1;
+  flex-basis: 0;
+  align-items: center;
+  padding: 0 24px;
+  border-radius: 5px;
+  border-bottom-left-radius: 15px;
+  background-color: rgb(249, 249, 249);
+  transition: background-color 150ms;
+}
+
+.button-wrapper-mid-side {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 0 24px;
+  border-radius: 5px;
+  background-color: rgb(249, 249, 249);
+  transition: background-color 150ms;
+}
+
+.button-wrapper-mid {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  padding: 0 24px;
+  border-radius: 5px;
+  background-color: rgb(249, 249, 249);
+  transition: background-color 150ms;
+  min-width: 115px;
+}
+
+.button-wrapper-right {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 0 24px;
+  border-radius: 5px;
+  border-bottom-right-radius: 15px;
+  background-color: rgb(249, 249, 249);
+  transition: background-color 150ms;
+}
+
+.button-wrapper-left:hover,
+.button-wrapper-mid:hover,
+.button-wrapper-mid-side:hover,
+.button-wrapper-right:hover {
+  background-color: rgba(168, 168, 168, 0.5);
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  height: 24px;
+}
+
+.logo {
+  height: 26px;
+  margin-right: 5px;
+}
+
+.search-icon {
+  height: 24px;
+}
+
+.current-user-icon {
+  height: 24px;
+  border-radius: 12px;
+
+}
+
+.library {
+  height: 24px;
+}
+
+@media (max-width: 664px) {
+  .button-wrapper-mid {
+    min-width: 0;
+  }
+  .middle-section {
+    margin: 0px 10px;
+  }
+  .button-wrapper-left,
+  .button-wrapper-mid,
+  .button-wrapper-mid-side,
+  .button-wrapper-right {
+    padding: 0 10px;
+  }
+  .header {
+    justify-content: space-around;
+  }
+  .main-image {
+    width: 0;
+  }
+
+  .search {
+    border-right: none;
+  }
+}

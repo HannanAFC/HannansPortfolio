@@ -1,0 +1,81 @@
+.account-container {
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  top: 45px;
+  right: 0;
+  background-color: rgb(249, 249, 249);
+  overflow-x: visible;
+  transition: 200ms;
+  box-shadow: -10px 6px 10px 0px #bdbdbdd0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left side */
+  transform: translateX(110%);
+  transition: transform 250ms;
+  visibility: visible;
+  min-width: 324px;
+  max-width: fit-content;
+}
+
+.account-container.open {
+  transform: translateX(0);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-container label {
+  margin: 4% 6% 4% 10%;
+  font-size: 20px;
+}
+
+.account-container input{
+  margin: 0% 6% 12% 10%;
+  width: 112%;
+  font-size: 16px;
+  padding: 0.4rem 0.8rem;
+  border: solid 1px rgb(116, 116, 116);
+  border-radius: 8px;
+}
+
+.sign-in {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  margin: 3%;
+}
+
+.continue {
+  margin: 10% 6% 2% 10%;
+  font-size: 18px;
+  padding: 0.4rem 0.8rem;
+  width: 125%;
+  border: solid 1px rgb(116, 116, 116);
+  background-color: rgb(249, 249, 249);
+  border-radius: 8px;
+  transition: all 150ms;
+}
+
+.continue:hover {
+  border: solid 1px black;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.continue:active {
+  opacity: 0.5;
+}
+
+.create-an-account-button {
+  margin: 6% 0;
+  width: 100%;
+  border: none;
+  background-color: rgb(249, 249, 249);
+  cursor: pointer;
+  font-size: 17px;
+}

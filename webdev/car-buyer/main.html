@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            Car-Buyer.com
+        </title>
+        <link rel="icon" href="title-icon.avif">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
+        <link rel="stylesheet" href="styles/content.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/login-menu.css">
+        <link rel="stylesheet" href="styles/create-menu.css">
+        <script src="javascript/sidebar.js"></script>
+        <script src="javascript/login-menu.js"></script>
+        <script src="javascript/check-password-match.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+        
+        <header class="header" id="header">
+            <div class="left-section">
+                <div class="button-wrapper-left" id="button-wrapper-left" onclick="openNav()">
+                    <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="">
+                </div>
+                <div class="button-wrapper-mid-side">
+                    <img class="library" src="icons/library.svg" alt="">
+                </div>
+            </div>
+            <div class="middle-section">
+                <div class="button-wrapper-mid">
+                    <img class="logo" src="icons/logo.svg" alt="">
+                    | Car-Buyer
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="button-wrapper-mid-side">
+                    <img class="search-icon" src="icons/search.svg" alt="">
+                </div>
+                <div class="button-wrapper-right" id="button-wrapper-right" onclick="openLoginMenu()">
+                    <img class="current-user-icon" src="icons/account.png" alt="">
+                </div>
+            </div>
+        </header>
+
+        <nav class="sidebar" id="mySidebar">
+            <div class="sidebar-button">
+                <img src="icons/new-car.png" alt="">
+                <div>New cars</div>
+            </div>
+            <div class="sidebar-button">
+                <img src="icons/used-car.png" alt="">
+                <div>Used cars</div>
+            </div>
+            <div class="sidebar-button">
+                <img src="icons/sell-car.png" alt="">
+                <div>Sell your car</div>
+            </div>
+        </nav>
+
+        <div class="account-container" id="login-menu">
+            <div class="sign-in">Sign in</div>
+            <form id="sign-in-form" action="info.html" method="get">
+                <div class="details">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="e.g. abc@email.com" required>
+                </div>
+                <div class="details">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div>
+                    <button type="submit" class="continue">Sign in</button>
+                </div>
+            </form>
+            <button class="create-an-account-button" onclick="createAccountMenu()"><u>Don't have an account? Create one.</u></button>
+        </div>
+
+        <div class="create-account-menu" id="create-account-menu">
+            <div class="create-account-top">
+                <div class="back-button"><button onclick="createAccountMenu()"><img src="icons/back-arrow.png" alt=""></button></div>
+                <div class="create-an-account">Create an account</div>
+            </div>
+            <form id="create-account-form" action="info.html" method="get" enctype="multipart/form-data">
+                <div class="details">
+                    <label for="Fname">First name</label>
+                    <input type="name" name="Fname" id="Fname" placeholder="John" required>
+                </div>
+                <div class="details">
+                    <label for="Lname">Last name</label>
+                    <input type="name" name="Lname" id="Lname" placeholder="Smith" required>
+                </div>
+                <div class="details">
+                    <label for="add-email">Email</label>
+                    <input type="email" name="add-email" id="add-email" placeholder="e.g. abc@email.com" required>
+                </div>
+                <div class="details">
+                    <label for="make-password">Password</label>
+                    <input onchange="checkPassword();" type="password" name="make-password" id="make-password" placeholder="Enter your password" minlength="8" required>
+                </div>
+                <div class="details">
+                    <label for="repeat-password">Repeat password</label>
+                    <input onchange="checkPassword();" type="password" name="repeat-password" id="repeat-password" placeholder="Repeat your password" required>
+                </div>
+                <div>
+                    <button type="submit" class="continue">Create account</button>
+                </div>
+            </form>
+        </div>
+        
+        <main>
+
+            <div class="container">
+                <div class="search">
+
+                    <div class="search-header">
+                        Start Searching
+                    </div>
+                    <form action="results.html" method="get" enctype="multipart/form-data">
+                        <div class="row">
+                            <input type="text" id="postcode" name="postcode"
+                            pattern="[a-zA-Z0-9]+" placeholder="Postcode" title="Postcode" required>
+                        </div>
+                        <div class="row">
+                            <select name="makes" id="makes">
+                                <option value="" disabled selected>Make</option>
+                                <option value="ford">Ford</option>
+                            </select>
+                            <select name="models" id="models">
+                                <option value="" disabled selected>Model</option>
+                                <option value="fiesta">Fiesta</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <select name="min-year" id="min-year">
+                                <option value="" disabled selected>Min year</option>
+                                <option value="2023">2023</option>
+                            </select>
+                            <select name="max-year" id="max-year">
+                                <option value="" disabled selected>Max year</option>
+                                <option value="2023">2023</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <select name="min-price" id="min-price">
+                                <option value="" disabled selected>Min price</option>
+                                <option value="0">£0</option>
+                            </select>
+                            <select name="max-price" id="max-price">
+                                <option value="" disabled selected>Max price</option>
+                                <option value="2000000">£2,000,000</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <select name="min-mileage" id="min-mileage">
+                                <option value="" disabled selected>Min mileage</option>
+                                <option value="0">0 miles</option>
+                            </select>
+                            <select name="max-mileage" id="max-mileage">
+                                <option value="" disabled selected>Max mileage</option>
+                                <option value="2000000">2,000,000 miles</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <select name="min-seats" id="min-seats">
+                                <option value="" disabled selected>Min seats</option>
+                                <option value="2">2</option>
+                            </select>
+                            <select name="max-seats" id="max-seats">
+                                <option value="" disabled selected>Max seats</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <button type="submit" class="search-button">Find your car</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="img-holder">
+
+                    <img class="main-image" src="images/main-page-image.jpg" alt="">
+
+                </div>
+            </div>
+
+        </main>
+
+    </body>
+
+</html>
