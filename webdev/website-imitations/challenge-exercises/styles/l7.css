@@ -1,0 +1,55 @@
+.search-youtube {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 17px;
+  padding-right: 20px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 2px;border-color: rgb(168, 168, 168);
+      }
+.search-google {
+  font-size: 20px;
+  width: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 17px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.178);
+}
+P {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: rgb(109, 109, 109);
+  font-weight: Bold;
+}
+.email-enter {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 308px;
+  height: 25px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: rgb(136, 136, 136);
+  border-width: 2px;
+}
+.email {
+  margin-bottom: 3px;
+}
+.join-button {
+  color: white;
+  background-color: rgb(50, 108, 216);
+  font-size: 18px;
+  border: none;
+  padding-left: 105px;
+  padding-right: 105px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  transition: background-color 150ms;
+}
+.join-button:hover {
+  cursor: pointer;
+  background-color: rgba(50, 108, 216, 0.719);
+}

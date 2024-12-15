@@ -1,0 +1,57 @@
+img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+div {
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: Bold;
+}
+
+button {
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: Bold;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: fixed;
+  top: 0;
+  height: 35px;
+  left: 0;
+  right: 0;
+  background-color: lightblue;
+  align-items: center;
+}
+
+.name-img {
+  display: flex;
+  align-items: center;
+
+}
+
+.add-friend {
+  background-color: rgb(24, 119, 242);
+  color: white;
+}
+
+.message {
+  width: 90px;
+  margin-left: 5px;
+}

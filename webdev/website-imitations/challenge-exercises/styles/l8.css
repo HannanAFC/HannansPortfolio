@@ -1,0 +1,93 @@
+.email,
+.name {
+  display: block;
+  font-size: 18px;
+  width: 190px;
+  margin-bottom: 5px;
+}
+.survey {
+  display: inline-block;
+  width: 250px;
+  font-size: 20px;
+}
+.yes,
+.no {
+  font-size: 14px;
+  position: relative;
+  top: -23px;
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.yes:hover,
+.no:hover {
+  cursor: pointer;
+}
+.google-logo {
+  width: 300px;
+  display: block;
+  margin-left: 300px;
+  margin-bottom: 20px;
+}
+.search-google {
+      font-size: 20px;
+      width: 700px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 17px;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.178);
+      margin-left: 100px;
+      margin-bottom: 30px;
+}
+.first-name,
+.last-name {
+  font-family: Arial;
+  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 14px;
+  width: 140px;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(200, 200, 200);
+}
+.enter-email {
+  font-family: Arial;
+  display: block;
+  margin-top: 12px;
+  width: 300px;
+  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 14px;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(200, 200, 200);
+}
+.sign-up {
+  font-family: Arial;
+  display: block;
+  margin-top: 12px;
+  border: none;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(61, 129, 255);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 130px;
+  padding-right: 130px;
+  font-weight: Bold;
+  border-radius: 7px;
+  transition: opacity 150ms, background-color 150ms;
+}
+.sign-up:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.sign-up:active {
+  background-color: rgb(49, 102, 202);
+}
